@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.sistema_bancario_po.controller.MenusController"
+            styleClass="fundo-claro" prefWidth="700" prefHeight="480" stylesheets="@style.css">
+
+    <top>
+        <VBox styleClass="topo" spacing="4">
+            <HBox alignment="CENTER_LEFT">
+                <Label fx:id="lblNome" styleClass="topo-nome"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Sair" styleClass="botao-sair" onAction="#sair"/>
+            </HBox>
+            <Label text="Saldo em conta" styleClass="topo-label"/>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <Label fx:id="lblSaldo" styleClass="saldo"/>
+                <Button fx:id="btnOcultar" text="Ocultar" styleClass="botao-ocultar" onAction="#alternarSaldo"/>
+            </HBox>
+            <Label fx:id="lblConta" styleClass="topo-label"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="24">
+            <Label text="O que você quer fazer?" styleClass="subtitulo-escuro"/>
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="Depositar" styleClass="botao-acao" onAction="#depositar"/>
+                <Button text="Sacar" styleClass="botao-acao" onAction="#sacar"/>
+                <Button text="Transferir" styleClass="botao-acao" onAction="#abrirPix"/>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="24" style="-fx-padding: 16;">
+            <Button text="Editar perfil" styleClass="botao-link" onAction="#editarPerfil"/>
+            <Button text="Excluir conta" styleClass="botao-perigo" onAction="#excluirConta"/>
+        </HBox>
+    </bottom>
+</BorderPane>

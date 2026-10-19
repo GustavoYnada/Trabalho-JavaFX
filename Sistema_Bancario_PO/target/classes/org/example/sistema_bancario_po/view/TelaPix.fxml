@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.sistema_bancario_po.controller.PixController"
+           styleClass="fundo" prefWidth="480" prefHeight="520" stylesheets="@style.css">
+    <VBox alignment="CENTER" maxWidth="360" maxHeight="400" spacing="14" styleClass="card">
+        <Label text="Transferir" styleClass="titulo"/>
+        <Label fx:id="lblSaldo" styleClass="subtitulo"/>
+        <TextField fx:id="tfCpfDestino" promptText="CPF de quem vai receber" styleClass="campo"/>
+        <TextField fx:id="tfValor" promptText="Valor (ex.: 50,00)" styleClass="campo" onAction="#transferir"/>
+        <Button text="Transferir" styleClass="botao" maxWidth="Infinity" onAction="#transferir"/>
+        <Button text="Voltar" styleClass="botao-link" onAction="#voltar"/>
+    </VBox>
+</StackPane>

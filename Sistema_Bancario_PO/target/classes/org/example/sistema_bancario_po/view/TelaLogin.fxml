@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.sistema_bancario_po.controller.LoginController"
+           styleClass="fundo" prefWidth="480" prefHeight="560" stylesheets="@style.css">
+    <VBox alignment="CENTER" maxWidth="360" maxHeight="400" spacing="14" styleClass="card">
+        <Label text="Meu Banco" styleClass="titulo"/>
+        <Label text="Acesse sua conta" styleClass="subtitulo"/>
+        <TextField fx:id="tfCpf" promptText="CPF (somente números)" styleClass="campo"/>
+        <PasswordField fx:id="pfSenha" promptText="Senha" styleClass="campo" onAction="#entrar"/>
+        <Button text="Entrar" styleClass="botao" maxWidth="Infinity" onAction="#entrar"/>
+        <Button text="Criar conta" styleClass="botao-link" onAction="#abrirCadastro"/>
+    </VBox>
+</StackPane>
